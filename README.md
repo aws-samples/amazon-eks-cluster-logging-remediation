@@ -1,11 +1,15 @@
-## My Project
+## amazon-eks-cluster-logging-remediation
 
-TODO: Fill this README out!
+## Content
+- CloudFormation Template
 
-Be sure to:
+## Why?
+ The goal would be to enable a user to be able to launch a Cloudformation template to build the resources. The Cloudformation template has a set CloudWatch Event Rule, and Lambda Function.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+## Utilities
+The Cloudformation template has a set CloudWatch Event Rule, and Lambda Function describes clusters and runs the remediation on each log group for each EKS control plane log types.
+
+The CloudWatch Event Rule has a ScheduleExpression polling at 20 minutes intervals. This is intentional for users with larger cluster requirements.
 
 ## Security
 
