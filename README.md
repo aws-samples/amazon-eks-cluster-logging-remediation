@@ -6,6 +6,8 @@
 ## Why?
  The goal would be to enable a user to be able to launch a Cloudformation template to build the resources. The Cloudformation template has a set CloudWatch Event Rule, and Lambda Function.
 
+ Amazon Elastic Kubernetes Service (EKS) provides control plane logs for each cluster [Reference](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+
 ## Utilities
 The Cloudformation template has a set CloudWatch Event Rule, and Lambda Function describes clusters and runs the remediation on each log group for each EKS control plane log types.
 
