@@ -15,7 +15,7 @@ Resources:
     Type: AWS::Events::Rule
     Properties:
       Name: eks-enable-cluster-logging
-      Description: Event rule which looks for CreateCluster event and enables audit logs for control plane
+      Description: Event rule which runs every 20min and enables audit logs for control plane for EKS
       ScheduleExpression: "rate(20 minutes)"
       RoleArn: !GetAtt CWEIAMRole.Arn
       Targets:
@@ -100,7 +100,7 @@ Resources:
   EnableLoggingLambda: #Lambda function
     Type: AWS::Lambda::Function
     Properties:
-      Description: Lambda which updates the EKS clusters to enable the
+      Description: Lambda which updates the EKS clusters to enable the control plane logs in EKS
       FunctionName: enable-eks-control-logging
       Environment:
         Variables:
